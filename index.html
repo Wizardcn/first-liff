@@ -66,6 +66,18 @@
     }
 
     async function sendMsg() {
+      if (liff.getContext().type !== "none") { // You can send message to channel when type is only not none 
+        await liff.sendMessages(
+          [
+            {
+              "type": "sticker",
+              "sticker_id": 1,
+              "package_id": 1
+            }
+          ]
+        )
+        alert("Message is sent")
+      }
     }
 
     function getContext() {
