@@ -1,3 +1,5 @@
+> This repository is created to learn about LIFF app using materials from LINE Developer Thailand
+
 # Building LIFF app into LINE
 Source code for LIFF v2 online course
 
