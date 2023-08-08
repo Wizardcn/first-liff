@@ -67,12 +67,12 @@
 
     async function sendMsg() {
       if (liff.getContext().type !== "none") { // You can send message to channel when type is only not none 
-        await liff.sendMessages(
+        await liff.sendMessages( // max bubble size is 5
           [
             {
               "type": "sticker",
-              "stickerId": 1,
-              "packageId": 1
+              "stickerId": 1988,
+              "packageId": 446
             }
           ]
         )
