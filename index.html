@@ -133,10 +133,13 @@
     async function main() {
       /*  alert("LINE Developers x Skooldio")  */
       await liff.init({ liffId: "2000348596-zn09kZjR" }) // Replace with your liff id
-      getEnvironment()
-      getUserProfile()
-      getContext()
-      getFriendship()
+      document.getElementById("isLoggedIn").append(liff.isLoggedIn())
+      if (liff.isLoggedIn()) {
+        getEnvironment()
+        getUserProfile()
+        getContext()
+        getFriendship()
+      }
       // createUniversalLink()
     }
     main()
