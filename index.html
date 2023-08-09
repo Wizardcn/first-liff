@@ -54,6 +54,8 @@
     }
 
     function closed() {
+      // enhance ux, security (request and revoke accessToken when open and close)
+      liff.closeWindow()
     }
 
     async function scanCode() {
