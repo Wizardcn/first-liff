@@ -146,18 +146,20 @@
     }
 
     async function main() {
-      /*  alert("LINE Developers x Skooldio")  */
+      liff.ready.then(() => {
+        document.getElementById("isLoggedIn").append(liff.isLoggedIn())
+        if (liff.isLoggedIn()) {
+          getEnvironment()
+          getUserProfile()
+          getContext()
+          getFriendship()
+        } else {
+          liff.login()
+        }
+        createUniversalLink()
+      })
+
       await liff.init({ liffId: "2000348596-zn09kZjR" }) // Replace with your liff id
-      document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-      if (liff.isLoggedIn()) {
-        getEnvironment()
-        getUserProfile()
-        getContext()
-        getFriendship()
-      } else {
-        liff.login()
-      }
-      createUniversalLink()
     }
     main()
   </script>
