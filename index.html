@@ -37,11 +37,6 @@
   <button id="btnClose" onclick="closed()">Close</button>
 
   <script src="js/vconsole.min.js"></script>
-  <script>
-    if (liff.getOS() !== "web") {
-      var vConsole = new VConsole()
-    }
-  </script>
 
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
@@ -163,6 +158,13 @@
       await liff.init({ liffId: "2000348596-zn09kZjR" }) // Replace with your liff id
     }
     main()
+  </script>
+
+  <script>
+    console.log(liff.getOS());
+    if (liff.getOS() !== "web") {
+      var vConsole = new VConsole()
+    }
   </script>
 </body>
 </html>
