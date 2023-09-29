@@ -38,9 +38,9 @@
 
   <script src="js/vconsole.min.js"></script>
   <script>
-    var vConsole = new VConsole()
-    console.log("Hello World!")
-    shouldError()
+    if (liff.getOS() !== "web") {
+      var vConsole = new VConsole()
+    }
   </script>
 
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
